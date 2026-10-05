@@ -299,7 +299,7 @@ function choose(s,o,button){
     popup(o.p[0],o.p[1],o.p[2],null,'اختاري غيره 😌');
     return;
   }
-  if(s.key==='gift' && o.v==='🌹 ورد'){
+  if(s.key==='gift' && ['🌹 ورد', '🧸 هدية صغيرة'].includes(o.v)){
     button.disabled=true;button.style.opacity='.45';button.style.cursor='not-allowed';
     popup(o.p[0],o.p[1],o.p[2],null,'اختاري غيره 😂');
     return;
