@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>💕 طلعتنا</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
+:root{--p:#e889ae;--pd:#c95f8c;--r:#f7dce8;--v:#9a7bb7;--t:#403440;--m:#817480}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:'IBM Plex Sans Arabic',sans-serif;color:var(--t);background:radial-gradient(circle at 15% 15%,#fff,transparent 28%),radial-gradient(circle at 85% 80%,#dbc6e9,transparent 32%),linear-gradient(135deg,#fff7fb,#f8eef9 55%,#fff);overflow-x:hidden}.app{width:min(calc(100% - 28px),560px);min-height:100vh;margin:auto;display:flex;align-items:center;padding:25px 0;position:relative;z-index:1}.card{width:100%;padding:30px 22px;background:#ffffffe8;border:1px solid #fff;border-radius:30px;box-shadow:0 18px 50px #734c6724;backdrop-filter:blur(14px);text-align:center}.hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden}.heart{position:absolute;bottom:-40px;opacity:.18;animation:up linear infinite}@keyframes up{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}.brand{display:inline-block;padding:8px 14px;border-radius:99px;background:#fff0f6;color:var(--pd);font-weight:700;font-size:14px;margin-bottom:18px}.icon{width:76px;height:76px;margin:0 auto 17px;display:grid;place-items:center;border-radius:24px;background:linear-gradient(145deg,#fff0f6,#f1e9f8);font-size:38px}h1{font-size:clamp(34px,9vw,46px);margin:0 0 8px}h2{font-size:clamp(23px,6vw,30px);margin:0 0 8px}p{margin:0;color:var(--m);line-height:1.8}.screen{display:none}.screen.active{display:block;animation:enter .4s ease}@keyframes enter{from{opacity:0;transform:translateY(15px) scale(.98)}to{opacity:1;transform:none}}button{font:inherit;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent}.start,.finish{width:100%;min-height:58px;margin-top:28px;border-radius:18px;color:#fff;font-weight:700;background:linear-gradient(135deg,var(--p),var(--v));box-shadow:0 12px 28px #c95f8c38}.progress{margin:0 auto 28px;text-align:right}.pl{display:flex;justify-content:space-between;color:var(--m);font-size:13px;margin-bottom:7px}.bar{height:7px;background:#f2e6ee;border-radius:99px;overflow:hidden}.fill{height:100%;background:linear-gradient(90deg,var(--p),var(--v));transition:.45s;width:0}.options{display:grid;gap:11px;margin-top:25px}.option{width:100%;min-height:58px;padding:13px 16px;border-radius:18px;background:#fff;color:var(--t);border:1px solid #f0e4eb;box-shadow:0 5px 15px #5b41530f;font-weight:600;transition:.2s}.option:hover{transform:translateY(-2px);border-color:#e7b5ca}.escape{position:relative;min-height:160px;margin-top:20px}.yes,.no{width:125px;min-height:58px;border-radius:18px;font-weight:700}.yes{color:#fff;background:linear-gradient(135deg,var(--p),var(--v));position:absolute;left:calc(50% - 140px);top:50%;transform:translateY(-50%)}.no{position:absolute;left:calc(50% + 15px);top:50%;transform:translateY(-50%);background:#fff;color:var(--m);border:1px solid #eadfe6;transition:.18s}.popup-bg{position:fixed;inset:0;background:#2d1f2b59;backdrop-filter:blur(5px);display:none;align-items:center;justify-content:center;padding:20px;z-index:20}.popup-bg.show{display:flex}.popup{width:min(100%,430px);background:#fff;border-radius:28px;padding:30px 22px 22px;text-align:center;box-shadow:0 25px 70px #23192240;animation:pop .28s}@keyframes pop{from{opacity:0;transform:scale(.88)}to{opacity:1;transform:scale(1)}}.popup .pe{font-size:48px}.popup h3{font-size:23px;margin:8px 0}.popup p{white-space:pre-line}.popup button{width:100%;min-height:52px;margin-top:20px;border-radius:16px;background:#fff0f6;color:var(--pd);font-weight:700}.summary{display:grid;gap:11px;margin-top:25px;text-align:right}.item{display:flex;align-items:center;gap:12px;padding:14px;background:#fff9fc;border:1px solid #f1e4ec;border-radius:17px}.item .si{font-size:24px}.item small{display:block;color:var(--m);font-size:12px}.item strong{font-size:16px}.note{margin-top:22px;padding:17px;border-radius:18px;background:linear-gradient(135deg,#fff0f6,#f4edfa);font-weight:600;line-height:1.8}.restart{margin-top:15px;background:transparent;color:var(--m);text-decoration:underline}.nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px}.back{background:transparent;color:var(--m);font-size:14px;padding:8px 4px}.back:disabled{opacity:.35;cursor:not-allowed}.choice-ok{color:var(--pd);font-size:13px;margin-top:10px}@media(max-width:390px){.card{padding:25px 16px}.yes,.no{width:112px}.yes{left:calc(50% - 122px)}.no{left:calc(50% + 10px)}}
+\n.celebrating{animation:cardCelebration .7s ease}\n@keyframes cardCelebration{0%{transform:scale(1)}35%{transform:scale(1.035)}70%{transform:scale(.99)}100%{transform:scale(1)}}\n.celebrate-screen{min-height:440px;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}\n.celebrate-orb{width:105px;height:105px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(145deg,#fff0f6,#f1e9f8);font-size:55px;box-shadow:0 15px 40px #c95f8c2e;animation:orbPulse 1.5s ease-in-out infinite;margin-bottom:20px}\n@keyframes orbPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}\n.celebrate-badge{padding:8px 15px;border-radius:999px;background:#fff0f6;color:var(--pd);font-size:14px;font-weight:700;margin-bottom:14px}\n.celebrate-screen h1{margin:0;font-size:clamp(29px,8vw,42px);animation:celebrateTitle .8s ease .15s both}\n@keyframes celebrateTitle{from{opacity:0;transform:translateY(12px) scale(.96)}to{opacity:1;transform:none}}\n.celebrate-main{margin-top:13px;font-size:20px;font-weight:700;color:var(--t)}\n.celebrate-sub{margin-top:3px;font-size:18px;color:var(--pd);font-weight:600}\n.final-note{margin-top:25px;padding:11px 15px;border-radius:14px;background:#faf5fa;color:var(--m);font-size:13px}\n.particle{position:fixed;z-index:100;pointer-events:none;animation:fall var(--d) cubic-bezier(.2,.7,.3,1) var(--delay) forwards}\n@keyframes fall{0%{transform:translate3d(0,0,0) rotate(0);opacity:0}10%{opacity:1}100%{transform:translate3d(var(--x),115vh,0) rotate(var(--r));opacity:0}}\n.heart-burst{position:fixed;z-index:100;pointer-events:none;font-size:24px;animation:rise var(--d) ease-out var(--delay) forwards}\n@keyframes rise{0%{transform:translate3d(0,0,0) scale(.6);opacity:0}15%{opacity:1}100%{transform:translate3d(var(--x),-105vh,0) scale(1.2);opacity:0}}\n</style></head>
+<body>
+<div class="hearts"><span class="heart" style="left:7%;font-size:20px;animation-duration:12s">♥</span><span class="heart" style="left:25%;font-size:15px;animation-duration:15s;animation-delay:3s">♡</span><span class="heart" style="left:48%;font-size:22px;animation-duration:13s;animation-delay:1s">♥</span><span class="heart" style="left:72%;font-size:17px;animation-duration:16s;animation-delay:5s">♡</span><span class="heart" style="left:91%;font-size:21px;animation-duration:14s;animation-delay:2s">♥</span></div>
+<main class="app"><section class="card">
+<div id="start" class="screen active"><div class="brand">💗 سؤالين وبنطلع</div><div class="icon">💕</div><h1>طلعتنا</h1><p>اختاري إيش نعمل بس نطلع 😌<br>فكري كويس، بس مش كثير 😂</p><button class="start" onclick="begin()">يلا نبدأ ❤️</button></div>
+<div id="quiz" class="screen"><div class="progress"><div class="pl"><span id="pt">السؤال 1 من 6</span><span>💕</span></div><div class="bar"><div class="fill" id="fill"></div></div></div><div id="content"></div><div class="nav"><button class="back" id="backBtn" onclick="goBack()">→ السؤال السابق</button></div></div>
+<div id="summaryScreen" class="screen"><div class="brand">✨ الخطة جاهزة</div><div class="icon">🥰</div><h2>💕 خطة موعدنا اليوم</h2><p>اختياراتك الرسمية... وما في تراجع 😂</p><div id="summary" class="summary"></div><div class="note">❤️ أهم شيء... نقضي وقت حلو سوا.<br>والباقي تفاصيل 😌</div><button class="finish" onclick="celebrate()">تم يا أحلى اختيار 😌❤️</button><button class="restart" onclick="location.reload()">نعيد من البداية؟</button></div>
+</section></main>
+<div id="popupBg" class="popup-bg"><div class="popup"><div id="pe" class="pe">😂</div><h3 id="ptitle"></h3><p id="pmsg"></p><button onclick="closePopup()">طيب خلاص 😌</button></div></div>
+<script>
+const ans={};
+let step=-1, cb=null, timer=null;
+const steps=[
+  {key:'time',icon:'⏰',title:'الساعة كم نطلع؟',sub:'اختاري الوقت... وأنا عليّ التنفيذ 😌',opts:[
+    {t:'5:00 الفجر',v:'5:00 الفجر',p:['😭','5 الفجر؟!','عشان أبوكي يقتلنا 😂'] ,bad:true},
+    {t:'9:00 الصبح',v:'9:00 الصبح',p:['☀️','هيك الكلام','9 الصبح... وقت حلو ومرتب للطلعة ❤️']},
+    {t:'12:00 الظهر',v:'12:00 الظهر',p:['😌','نص اليوم؟','واضح إن النوم أهم من الطلعة 😂']},
+    {t:'4:00 العصر',v:'4:00 العصر',p:['🥰','هذا الكلام!','4 العصر... وقت حلو وطلعة أحلى ❤️']}
+  ]},
+  {key:'place',icon:'📍',title:'وين نطلع؟',sub:'اختاري بحكمة... أنا واثق فيك 😂',opts:[
+    {t:'🇸🇦 السعودية',v:'السعودية',p:['😂','حبيبتي...','الميزانية 200 شيكل مش 200 ألف 😭']},
+    {t:'🇵🇸 غزة',v:'غزة',p:['🌊','حلوة الفكرة','بس غزة بعيدة... فكري بغيرها يا حلوة 😭']},
+    {t:'🌅 شرق',v:'شرق',p:['😂','بلاش هبل','لا نموت قبل لا نتزوج 😂']},
+    {t:'🏡 الدير',v:'الدير',p:['🏡','اختيار موفق','هيك صرنا على الطريق الصح ❤️']}
+  ]},
+  {key:'deir',icon:'📍',title:'وين نطلع بالدير؟',sub:'هنا الخيارات المعقولة 😌',opts:[
+    {t:'☕ كافيه',v:'☕ كافيه',p:['☕','مزاج رايق','قعدة حلوة وحكي أحلى ❤️']},
+    {t:'🍕 مطعم',v:'🍕 مطعم',p:['🍽️','اختيار ممتاز','واضح إن في جوع محترم 😂']},
+    {t:'🌊 بحر',v:'🌊 بحر',p:['🌊','يا سلام','بحر وهواء ووجودك... شو بدنا أكثر؟ ❤️']}
+  ]},
+  {key:'food',icon:'🍽️',title:'إيش ناكل؟',sub:'اختاري بسرعة قبل ما أتدخل 😂',opts:[
+    {t:'🍕 بيتزا',v:'🍕 بيتزا',p:['🍕','اختيار لذيذ','واضح إنك تعرفي كيف تفرحي قلبي 😂❤️']},
+    {t:'🍔 برجر',v:'🍔 برجر',p:['🍔','هيك الكلام','اختيار يشبع... وهذا أهم شيء 😂']},
+    {t:'🍗 دجاج',v:'🍗 دجاج',p:['🍗','اختيار محترم','اليوم شكلها وجبة دسمة 😌']},
+    {t:'🍝 شاورما',v:'🍝 شاورما',p:['🌯','شاورما؟','أنا موافق بدون نقاش 😂❤️']},
+    {t:'🍰 حلو وكريب',v:'🍰 حلو وكريب',p:['🍰','عرفتِ تختاري','الحلو أولًا... المنطق آخر شيء 😂']},
+    {t:'🎲 إنت اختار',v:'🎲 أنا أختار',p:['🥰','أحلى اختيار','عارفك... ما بتعرفي تختاري، أنا هختار 😌']}
+  ]},
+  {key:'gift',icon:'🌹',title:'شو بتحبي أجيبلك معي؟',sub:'آخر سؤال... فكري بالمصلحة 😂',opts:[
+    {t:'🌹 ورد',v:'🌹 ورد',p:['😂','مش حلو الورد؟','الورد ما بيتاكل يا حبيبتي 😭']},
+    {t:'🍫 شوكولاتة',v:'🍫 شوكولاتة',p:['🍫','هذا الاختيار اللي بحبه','أخيرًا اختيار ينفع للطوارئ 😂❤️']},
+    {t:'🧸 هدية صغيرة',v:'🧸 هدية صغيرة',p:['😏','هدية صغيرة؟','أنا هدية كبيرة وبدك صغيرة كمان؟ قلة حيا 😂']},
+    {t:'❤️ ولا شيء، وجودك بكفي',v:'❤️ ولا شيء، وجودك بكفي',p:['🥹','هيك الكلام','بس وجودك فعلًا بكفي ❤️'] ,small:'كويس وفرتي علي 😂'}
+  ]}
+];
+
+function show(id){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active')}
+function begin(){show('quiz');renderFirst()}
+function renderFirst(){
+  clearTimeout(timer);
+  document.getElementById('pt').textContent='السؤال 1 من 6';
+  document.getElementById('fill').style.width='16.6%';
+  document.getElementById('content').innerHTML='<div class="icon">🥺</div><h2>بدك نطلع طلعة؟</h2><p>فكري كويس... بس مش كثير 😂</p><div class="escape" id="escape"><button class="yes" onclick="yesDate()">نعم ❤️</button><button class="no" id="no">لا 🙄</button></div>';
+  document.getElementById('backBtn').disabled=true;
+  const n=document.getElementById('no'),z=document.getElementById('escape');
+  function move(){n.style.left=Math.random()*Math.max(0,z.clientWidth-n.offsetWidth)+'px';n.style.top=Math.random()*Math.max(0,z.clientHeight-n.offsetHeight)+'px';n.style.transform='rotate('+(Math.random()*12-6)+'deg)'}
+  n.addEventListener('mouseenter',move);n.addEventListener('touchstart',e=>{e.preventDefault();move()},{passive:false});n.addEventListener('click',move)
+}
+function yesDate(){
+  ans.date='نعم ❤️';
+  popup('👏','شاطرة!','كنت عارف إن عندك ذوق 😌❤️',()=>{step=0;render()},'شكرا يا تاج راسي');
+}
+function render(){
+  clearTimeout(timer);
+  const s=steps[step];
+  document.getElementById('pt').textContent=`السؤال ${step+2} من 6`;
+  document.getElementById('fill').style.width=((step+2)/6*100)+'%';
+  document.getElementById('backBtn').disabled=false;
+  document.getElementById('content').innerHTML=`<div class="icon">${s.icon}</div><h2>${s.title}</h2><p>${s.sub}</p><div class="options" id="opts"></div>`;
+  const box=document.getElementById('opts');
+  s.opts.forEach(o=>{const b=document.createElement('button');b.className='option';b.innerHTML=o.t;b.onclick=()=>choose(s,o,b);box.appendChild(b)});
+  if(s.key==='food'){
+    timer=setTimeout(()=>{
+      ans.food='🎲 أنا هختار';
+      popup('😂','خلاص عارفك...','ما رح نخلي الموضوع يطول. أنا هختار 🤌❤️',()=>next());
+    },7000);
+  }
+}
+function choose(s,o,button){
+  clearTimeout(timer);
+  // Disable only choices that are intentionally rejected.
+  if((s.key==='place' && ['السعودية','غزة','شرق'].includes(o.v)) || (s.key==='time' && o.bad)){
+    button.disabled=true;button.style.opacity='.45';button.style.cursor='not-allowed';
+    popup(o.p[0],o.p[1],o.p[2],null,'اختاري غيره 😌');
+    return;
+  }
+  if(s.key==='gift' && o.v==='🌹 ورد'){
+    button.disabled=true;button.style.opacity='.45';button.style.cursor='not-allowed';
+    popup(o.p[0],o.p[1],o.p[2],null,'اختاري غيره 😂');
+    return;
+  }
+  ans[s.key]=o.v;
+  clearFutureAnswers(step);
+  // Every valid answer gets a cute popup before continuing.
+  popup(o.p[0],o.p[1],o.p[2] + (o.small ? '\n\n' + o.small : ''),()=>{
+    if(s.key==='food') ans.food='🎲 أنا هختار';
+    next();
+  },'يلا نكمل 💕');
+}
+function clearFutureAnswers(from){
+  for(let i=from+1;i<steps.length;i++) delete ans[steps[i].key];
+}
+function goBack(){
+  if(step<0)return;
+  clearTimeout(timer);
+  if(document.getElementById('popupBg').classList.contains('show'))return;
+  if(step===0){step=-1;renderFirst();return;}
+  step--;
+  render();
+}
+function next(){
+  step++;
+  if(step>=steps.length){build();show('summaryScreen');return}
+  render();
+}
+function popup(e,t,m,fn,label='طيب خلاص 😌'){
+  document.getElementById('pe').textContent=e;
+  document.getElementById('ptitle').textContent=t;
+  document.getElementById('pmsg').textContent=m;
+  document.querySelector('#popupBg button').textContent=label;
+  document.getElementById('popupBg').classList.add('show');
+  cb=fn||null;
+}
+function closePopup(){
+  document.getElementById('popupBg').classList.remove('show');
+  const f=cb;cb=null;
+  if(f)setTimeout(f,140);
+}
+function build(){
+  const rows=[['⏰','الوقت',ans.time],['📍','المكان',ans.place],['🗺️','الطلعة بالدير',ans.deir],['🍽️','الأكل',ans.food],['🎁','معانا',ans.gift]];
+  document.getElementById('summary').innerHTML=rows.map(r=>`<div class="item"><div class="si">${r[0]}</div><div><small>${r[1]}</small><strong>${r[2]||'—'}</strong></div></div>`).join('')
+}
+function celebrate(){
+  document.getElementById('summaryScreen').innerHTML=`<div class="celebrate-screen">
+    <div class="celebrate-orb">💕</div>
+    <div class="celebrate-badge">🎉 تم اعتماد الخطة 🎉</div>
+    <h1>موعدنا صار رسمي!</h1>
+    <p class="celebrate-main">جهزي حالك يا حلوة 😌❤️</p>
+    <p class="celebrate-sub">أنا جاي آخذك 🥰</p>
+    <div class="final-note">ولا يوجد إلغاء بعد اعتماد الخطة 😂</div>
+  </div>`;
+  document.querySelector('.card').classList.add('celebrating');
+  const symbols=['🎉','❤️','💕','💗','✨','🌸','🥰','💫'];
+  for(let i=0;i<55;i++){
+    const x=document.createElement('div');x.className='particle';x.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    x.style.left=Math.random()*100+'vw';x.style.top=(-10-Math.random()*20)+'vh';
+    x.style.setProperty('--x',((Math.random()*2-1)*180)+'px');x.style.setProperty('--r',((Math.random()*720)-360)+'deg');
+    x.style.setProperty('--d',(1.8+Math.random()*2.2)+'s');x.style.setProperty('--delay',(Math.random()*.7)+'s');
+    x.style.fontSize=(16+Math.random()*18)+'px';document.body.appendChild(x);setTimeout(()=>x.remove(),5000);
+  }
+  for(let i=0;i<20;i++){
+    const x=document.createElement('div');x.className='heart-burst';x.textContent=['❤️','💕','💗','♡'][Math.floor(Math.random()*4)];
+    x.style.left=(20+Math.random()*60)+'vw';x.style.bottom='-30px';x.style.setProperty('--x',((Math.random()*2-1)*150)+'px');
+    x.style.setProperty('--d',(2+Math.random()*1.5)+'s');x.style.setProperty('--delay',(Math.random()*.7)+'s');
+    document.body.appendChild(x);setTimeout(()=>x.remove(),4500);
+  }
+}
+</script></body></html>
