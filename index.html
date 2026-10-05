@@ -219,7 +219,7 @@ function renderFirst(){
     noClicks++;
 
     // بعد الضغطة الثانية تظهر الرسالة تحت الأزرار
-    if(noClicks === 2){
+    if(noClicks === 1){
       document.getElementById('noMessage').innerHTML =
         'بلاش زناخة 😂<br><small>وافقي يا حلوة ❤️</small>';
     }
@@ -227,6 +227,18 @@ function renderFirst(){
     if(noClicks === 3){
       document.getElementById('noMessage').innerHTML =
         'وافقي لاضربك عاد 🌚';
+    }
+    
+    if(noClicks === 3){
+      document.getElementById('noMessage').innerHTML =
+        'ااخر فرصة معك🌚';
+    }
+
+    
+    
+    if(noClicks === 4){
+      document.getElementById('noMessage').innerHTML =
+        'بمزح بس وافقي 😢';
     }
 
     // الزر يهرب في كل مرة
