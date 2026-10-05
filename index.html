@@ -189,13 +189,72 @@ function show(id){document.querySelectorAll('.screen').forEach(x=>x.classList.re
 function begin(){show('quiz');renderFirst()}
 function renderFirst(){
   clearTimeout(timer);
+
   document.getElementById('pt').textContent='السؤال 1 من 6';
   document.getElementById('fill').style.width='16.6%';
-  document.getElementById('content').innerHTML='<div class="icon">🥺</div><h2>بدك نطلع طلعة؟</h2><p>فكري كويس... بس مش كثير 😂</p><div class="escape" id="escape"><button class="yes" onclick="yesDate()">نعم ❤️</button><button class="no" id="no">لا 🙄</button></div>';
+
+  document.getElementById('content').innerHTML=`
+    <div class="icon">🥺</div>
+    <h2>بدك نطلع طلعة؟</h2>
+    <p>فكري كويس... بس مش كثير 😂</p>
+
+    <div class="escape" id="escape">
+      <button class="yes" onclick="yesDate()">نعم ❤️</button>
+      <button class="no" id="no">لا 🙄</button>
+    </div>
+
+    <div id="noMessage" class="no-message"></div>
+  `;
+
   document.getElementById('backBtn').disabled=true;
-  const n=document.getElementById('no'),z=document.getElementById('escape');
-  function move(){n.style.left=Math.random()*Math.max(0,z.clientWidth-n.offsetWidth)+'px';n.style.top=Math.random()*Math.max(0,z.clientHeight-n.offsetHeight)+'px';n.style.transform='rotate('+(Math.random()*12-6)+'deg)'}
-  n.addEventListener('mouseenter',move);n.addEventListener('touchstart',e=>{e.preventDefault();move()},{passive:false});n.addEventListener('click',move)
+
+  const n = document.getElementById('no');
+  const z = document.getElementById('escape');
+
+  let noClicks = 0;
+
+  function moveButton(e){
+    if(e) e.preventDefault();
+
+    noClicks++;
+
+    // بعد الضغطة الثانية تظهر الرسالة تحت الأزرار
+    if(noClicks === 2){
+      document.getElementById('noMessage').innerHTML =
+        'بلاش زناخة 😂<br><small>وافقي يا حلوة ❤️</small>';
+    }
+
+    // الزر يهرب في كل مرة
+    const maxX = z.clientWidth - n.offsetWidth;
+    const maxY = z.clientHeight - n.offsetHeight;
+
+    n.style.left =
+      Math.random() * Math.max(0, maxX) + 'px';
+
+    n.style.top =
+      Math.random() * Math.max(0, maxY) + 'px';
+
+    n.style.transform =
+      'rotate(' + (Math.random() * 12 - 6) + 'deg)';
+  }
+
+  n.addEventListener('touchstart', moveButton, {passive:false});
+  n.addEventListener('click', moveButton);
+
+  // الهروب بمجرد اقتراب الماوس بدون احتسابها كضغطة
+  n.addEventListener('mouseenter', () => {
+    const maxX = z.clientWidth - n.offsetWidth;
+    const maxY = z.clientHeight - n.offsetHeight;
+
+    n.style.left =
+      Math.random() * Math.max(0, maxX) + 'px';
+
+    n.style.top =
+      Math.random() * Math.max(0, maxY) + 'px';
+
+    n.style.transform =
+      'rotate(' + (Math.random() * 12 - 6) + 'deg)';
+  });
 }
 function yesDate(){
   ans.date='نعم ❤️';
